@@ -1,0 +1,13 @@
+# netlify.toml
+
+[build]
+  base = "vue"
+  command = "npm run dev"
+  publish = "dist"
+  environment = { NODE_VERSION = "14" }
+  functions = "./functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
